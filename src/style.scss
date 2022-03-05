@@ -1,0 +1,401 @@
+$color-none: transparent;
+$border: 8px;
+
+/* ---------------------------------------------------------------- */
+
+/* MIXIN */
+
+@mixin alinhamento {
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+@mixin mainProps {
+
+    background-color: #FFF;
+
+    display: flex;
+
+    width: 500px;
+
+    border-radius: $border;
+
+    h2 {
+
+        font-size: 39px;
+
+        margin: 16px 0;
+
+    }
+
+    span {
+
+        font-weight: bold;
+        margin-bottom: 16px;
+
+    }
+
+
+}
+
+@mixin title {
+
+    color: white;
+
+    font-size: 85px;
+
+    animation: flipTitle 5s linear infinite;
+
+}
+
+@mixin btn {
+
+    background-color: $color-none;
+
+    border: 0;
+
+    display: flex;
+
+    transition: transform 0.5s;
+
+    cursor: pointer;
+
+    &:hover {
+        
+        transform: scale(1.2);
+
+    }
+
+}
+
+/* ---------------------------------------------------------------- */
+
+/* KEYFRAMES */
+
+@keyframes flipTitle {
+
+    0% {
+
+        transform: rotateX(0deg);
+
+    }
+    20% {
+
+        transform: rotateX(90deg);
+
+    }
+    40% {
+
+        transform: rotateX(0deg);
+
+    }
+    60% {
+
+        transform: rotateX(90deg);
+
+    }
+    80% {
+
+        transform: rotateX(0deg);   
+
+    }
+    100% {
+
+        transform: rotateX(0deg);
+
+    }
+    
+}
+
+/* ---------------------------------------------------------------- */
+
+.container {
+
+    background: linear-gradient(#121212 , #212b46);
+
+    height: 100vh;
+    display: flex;
+
+    @include alinhamento()
+
+}
+
+.title {
+
+    @include title()
+    
+}
+
+.containerInput {
+
+    background-color: rgba(255,255,255, 0.2);
+
+    display: flex;
+
+    margin: 34px 0;
+    padding: 15px;
+
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    border-radius: $border;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.containerInput input {
+
+    background-color: $color-none;
+    font-size: 20px;
+    color: #fff;
+
+    border: 0;
+    outline: none;
+
+    margin-right: 8px;
+
+}
+
+.containerInput input::placeholder {
+
+    color: #f1f1f1;
+
+}
+
+.btnSearch {
+
+    @include btn ();
+    @include alinhamento ();
+
+}
+
+.main {
+
+    @include mainProps ();
+    @include alinhamento();
+
+}
+
+/* ---------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+    .title {
+
+        font-size: 72px;
+    
+    }
+
+    .main h2 {
+        font-size: 32px;
+    }
+
+    .main {
+        width: 80%;
+        min-height: 250px;
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .title {
+
+        font-size: 60px;
+    
+    }
+
+    .main h2 {
+
+        font-size: 28px;
+
+    }
+
+    .main {
+
+        width: 80%;
+        min-height: 250px;
+
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .title {
+
+        font-size: 48px;
+    
+    }
+
+    .main h2 {
+
+        font-size: 18px;
+
+    }
+
+    .main {
+
+        width: 80%;
+        min-height: 250px;
+
+    }
+
+    .containerInput {
+
+        width: 200px;
+
+    }
+
+    .containerInput input {
+
+        font-size: 12px;
+
+        text-align: center;
+
+    }
+
+    .icon, .btnSearch {
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .title {
+
+        font-size: 36px;
+    
+    }
+
+    .main h2 {
+
+        font-size: 20px;
+
+    }
+
+    .main span {
+
+        font-size: 14px;
+
+    }
+
+    .main {
+
+        width: 80%;
+        min-height: 200px;
+
+    }
+
+    .containerInput {
+
+        width: 200px;
+
+    }
+
+    .containerInput input {
+
+        font-size: 10px;
+
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .title {
+
+        font-size: 30px;
+    
+    }
+
+    .main h2 {
+
+        font-size: 12px;
+
+    }
+
+    .main {
+
+        width: 80%;
+        min-height: 150px;
+
+    }
+
+    .main span {
+
+        font-size: 12px;
+
+    }
+
+    .containerInput {
+
+        width: 100px;
+
+    }
+
+    .containerInput input {
+
+        font-size: 6px;
+
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width: 270px) {
+
+    .title {
+
+        font-size: 25px;
+    
+    }
+
+    .main span {
+
+        font-size: 8px;
+
+    }
+
+}
+
+@media (max-width: 270px) {
+
+    .title {
+
+        font-size: 16px;
+    
+    }
+    
+    .main {
+
+        min-height: 80px;
+
+    }
+
+}
+
+@media (max-width: 180px) {
+
+    .title {
+
+        font-size: 16px;
+    
+    }
+    
+    .main span {
+
+        font-size: 6px;
+
+    }
+
+}
+
+/* ---------------------------------------------------------------- */

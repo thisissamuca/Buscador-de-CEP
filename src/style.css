@@ -1,0 +1,304 @@
+/* ---------------------------------------------------------------- */
+/* MIXIN */
+/* ---------------------------------------------------------------- */
+/* KEYFRAMES */
+@-webkit-keyframes flipTitle {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  20% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  40% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  60% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  80% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes flipTitle {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  20% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  40% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  60% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  80% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+.container {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), to(#212b46));
+  background: linear-gradient(#121212, #212b46);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  color: white;
+  font-size: 85px;
+  -webkit-animation: flipTitle 5s linear infinite;
+          animation: flipTitle 5s linear infinite;
+}
+
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 34px 0;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input {
+  background-color: transparent;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+  outline: none;
+  margin-right: 8px;
+}
+
+.containerInput input::-webkit-input-placeholder {
+  color: #f1f1f1;
+}
+
+.containerInput input:-ms-input-placeholder {
+  color: #f1f1f1;
+}
+
+.containerInput input::-ms-input-placeholder {
+  color: #f1f1f1;
+}
+
+.containerInput input::placeholder {
+  color: #f1f1f1;
+}
+
+.btnSearch {
+  background-color: transparent;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.btnSearch:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 500px;
+  border-radius: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main h2 {
+  font-size: 39px;
+  margin: 16px 0;
+}
+
+.main span {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* ---------------------------------------------------------------- */
+@media (max-width: 720px) {
+  .title {
+    font-size: 72px;
+  }
+  .main h2 {
+    font-size: 32px;
+  }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 60px;
+  }
+  .main h2 {
+    font-size: 28px;
+  }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 48px;
+  }
+  .main h2 {
+    font-size: 18px;
+  }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+  .containerInput {
+    width: 200px;
+  }
+  .containerInput input {
+    font-size: 12px;
+    text-align: center;
+  }
+  .icon, .btnSearch {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 36px;
+  }
+  .main h2 {
+    font-size: 20px;
+  }
+  .main span {
+    font-size: 14px;
+  }
+  .main {
+    width: 80%;
+    min-height: 200px;
+  }
+  .containerInput {
+    width: 200px;
+  }
+  .containerInput input {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: 30px;
+  }
+  .main h2 {
+    font-size: 12px;
+  }
+  .main {
+    width: 80%;
+    min-height: 150px;
+  }
+  .main span {
+    font-size: 12px;
+  }
+  .containerInput {
+    width: 100px;
+  }
+  .containerInput input {
+    font-size: 6px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 270px) {
+  .title {
+    font-size: 25px;
+  }
+  .main span {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 270px) {
+  .title {
+    font-size: 16px;
+  }
+  .main {
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 180px) {
+  .title {
+    font-size: 16px;
+  }
+  .main span {
+    font-size: 6px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/*# sourceMappingURL=style.css.map */
